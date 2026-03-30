@@ -17,7 +17,7 @@ permissions:
   id-token: write
   contents: read
 
-#jobs sample
+#jobs samples
 jobs:
   deploy:
     runs-on: ubuntu-latest
