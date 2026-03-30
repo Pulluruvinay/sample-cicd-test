@@ -17,9 +17,11 @@ permissions:
   id-token: write
   contents: read
 
+#jobs
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,3 +60,5 @@ jobs:
           service: ${{ env.ECS_SERVICE }}
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           wait-for-service-stability: false
+
+
